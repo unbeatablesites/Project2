@@ -13,7 +13,11 @@ module.exports = function(sequelize, DataTypes) {
     Job.hasOne(models.User);
   };
   Job.associate = function(models) {
-    Job.hasOne(models.Project);
+    Job.belongsTo(models.Project, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
   };
   Job.associate = function(models) {
     Job.hasMany(models.Skill);
