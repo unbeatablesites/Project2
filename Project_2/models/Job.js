@@ -22,4 +22,7 @@ module.exports = function(sequelize, DataTypes) {
   Job.associate = function(models) {
     Job.hasMany(models.Skill);
   };
+  Job.associate = function(models) {
+    Job.hasMany(models.Bid);
+  };
 };
