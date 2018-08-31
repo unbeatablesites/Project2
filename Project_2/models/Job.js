@@ -20,9 +20,30 @@ module.exports = function(sequelize, DataTypes) {
     });
   };
   Job.associate = function(models) {
-    Job.hasMany(models.Skill);
+    Job.hasMany(models.Bid, {
+      onDelete: "cascade"
+    });
   };
   Job.associate = function(models) {
-    Job.hasMany(models.Bid);
+    Job.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
   };
+  Job.associate = function(models) {
+    Job.belongsTo(models.Project, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+  Job.associate = function(models) {
+    Job.belongsTo(models.Skill, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+  return Job;
 };

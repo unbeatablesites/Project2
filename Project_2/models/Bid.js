@@ -17,9 +17,7 @@ module.exports = function(sequelize, DataTypes) {
           allowNull: false
         }
       });
-      Bid.associate = function(models) {
-        Bid.hasMany(models.Skill);
-      };
     };
   };
+  return Bid;
 };

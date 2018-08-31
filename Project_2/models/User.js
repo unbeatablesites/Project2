@@ -25,7 +25,13 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
   User.associate = function(models) {
-    User.hasMany(models.Skill);
+    User.hasMany(models.Project);
+  };
+  User.associate = function(models) {
+    User.hasMany(models.Job);
+  };
+  User.associate = function(models) {
+    User.belongsToMany(models.Skill, { through: "users_skills" });
   };
   return User;
 };
