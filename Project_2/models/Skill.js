@@ -9,5 +9,11 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: "crafting"
     }
   });
+  Skill.associate = function(models) {
+    Skill.hasMany(models.Job);
+  };
+  Skill.associate = function(models) {
+    Skill.belongsToMany(models.User, { through: "users_skills" });
+  };
   return Skill;
 };

@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "development",
-    "password": "development",
+    "username": "root",
+    "password": "root",
     "database": "project2",
     "host": "localhost",
     "port": 8889,
