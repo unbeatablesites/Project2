@@ -28,7 +28,10 @@ module.exports = function(sequelize, DataTypes) {
     User.hasMany(models.Project);
   };
   User.associate = function(models) {
-    User.hasMany(models.Job);
+    User.hasMany(models.Job, {
+      as: "user",
+      foreignKey: "UserId"
+    });
   };
   User.associate = function(models) {
     User.belongsToMany(models.Skill, { through: "users_skills" });
