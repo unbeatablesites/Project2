@@ -36,5 +36,11 @@ module.exports = function(sequelize, DataTypes) {
   User.associate = function(models) {
     User.belongsToMany(models.Skill, { through: "users_skills" });
   };
+  User.associate = function(models) {
+    User.belongsToMany(models.Bid, { through: "users_bids" });
+  };
+  User.associate = function(models) {
+    User.belongsToMany(models.Job, { through: "users_jobs" });
+  };
   return User;
 };

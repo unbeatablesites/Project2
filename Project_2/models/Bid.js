@@ -6,18 +6,10 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
   Bid.associate = function(models) {
-    Bid.belongsTo(models.User, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-    Bid.associate = function(models) {
-      Bid.belongsTo(models.Job, {
-        foreignKey: {
-          allowNull: false
-        }
-      });
-    };
+    Bid.belongsToMany(models.Job, { through: "jobs_bids" });
+  };
+  Bid.associate = function(models) {
+    Bid.belongsToMany(models.User, { through: "users_bids" });
   };
   return Bid;
 };

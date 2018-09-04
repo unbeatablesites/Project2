@@ -10,13 +10,10 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
   Project.associate = function(models) {
-    Project.hasMany(models.Job, {
-      as: "project",
-      foreignKey: "ProjectId"
-    });
+    Project.belongsTo(models.User);
   };
   Project.associate = function(models) {
-    Project.belongsTo(models.User);
+    Project.belongsToMany(models.Job, { through: "projects_jobs" });
   };
   return Project;
 };
