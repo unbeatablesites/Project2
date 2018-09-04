@@ -11,8 +11,12 @@ module.exports = function(sequelize, DataTypes) {
   });
   Project.associate = function(models) {
     Project.hasMany(models.Job, {
-      onDelete: "cascade"
+      as: "project",
+      foreignKey: "ProjectId"
     });
+  };
+  Project.associate = function(models) {
+    Project.belongsTo(models.User);
   };
   return Project;
 };

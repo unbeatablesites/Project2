@@ -10,9 +10,6 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
   Job.associate = function(models) {
-    Job.hasOne(models.User);
-  };
-  Job.associate = function(models) {
     Job.belongsTo(models.Project, {
       foreignKey: {
         allowNull: false
@@ -26,16 +23,12 @@ module.exports = function(sequelize, DataTypes) {
   };
   Job.associate = function(models) {
     Job.belongsTo(models.User, {
-      foreignKey: {
-        allowNull: false
-      }
+      foreignKey: "UserId"
     });
   };
   Job.associate = function(models) {
     Job.belongsTo(models.Project, {
-      foreignKey: {
-        allowNull: false
-      }
+      foreignKey: "ProjectId"
     });
   };
   Job.associate = function(models) {
