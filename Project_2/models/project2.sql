@@ -16,3 +16,4 @@ SELECT * FROM skills;
 SELECT * FROM projects;
 
 SELECT * FROM users_skills;
+
