@@ -10,33 +10,16 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
   Job.associate = function(models) {
-    Job.belongsTo(models.Project, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
+    Job.belongsToMany(models.Skill, { through: "jobs_skills" });
   };
   Job.associate = function(models) {
-    Job.hasMany(models.Bid, {
-      onDelete: "cascade"
-    });
+    Job.belongsToMany(models.User, { through: "users_jobs" });
   };
   Job.associate = function(models) {
-    Job.belongsTo(models.User, {
-      foreignKey: "UserId"
-    });
+    Job.belongsToMany(models.Project, { through: "projects_jobs" });
   };
   Job.associate = function(models) {
-    Job.belongsTo(models.Project, {
-      foreignKey: "ProjectId"
-    });
-  };
-  Job.associate = function(models) {
-    Job.belongsTo(models.Skill, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
+    Job.belongsToMany(models.Bid, { through: "jobs_bids" });
   };
   return Job;
 };
