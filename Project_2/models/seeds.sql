@@ -108,3 +108,63 @@ VALUES (12, 6);
 
 INSERT INTO users_skills (SkillId, UserId)
 VALUES (11, 6);
+
+## projects
+
+INSERT INTO projects (title, category, UserId)
+VALUES ("'67 Mustang", "automotive", 4);
+
+INSERT INTO projects (title, category, UserId)
+VALUES ("Mario Cosplay", "cosplay", 5);
+
+INSERT INTO projects (title, category, UserId)
+VALUES ("3D D&D Game Board", "crafts", 1);
+
+INSERT INTO projects (title, category, UserId)
+VALUES ("Model Plane", "crafts", 3);
+
+INSERT INTO projects (title, category, UserId)
+VALUES ("Temple Replica", "models", 2);
+
+INSERT INTO projects (title, category, UserId)
+VALUES ("Skate Deck", "sporting", 6);
+
+## jobs
+
+INSERT INTO jobs (title, category, SkillId)
+VALUE ("Upholstery", "automotive", 1);
+
+INSERT INTO jobs (title, category, SkillId)
+VALUE ("Head Sculpting", "cosplay", 5);
+
+INSERT INTO jobs (title, category, SkillId)
+VALUE ("detail painting", "modeling", 3);
+
+INSERT INTO jobs (title, category, SkillId)
+VALUE ("miniature human models", "modeling", 9);
+
+INSERT INTO jobs (title, category, SkillId)
+VALUE ("building skateboard deck", "sports", 2);
+
+INSERT INTO jobs (title, category, SkillId)
+VALUE ("building model buildings", "crafts", 7);
+
+## bids
+
+INSERT INTO bids (value, UserId)
+VALUES (200, 5);
+
+INSERT INTO bids (value, UserId)
+VALUES (150,  3);
+
+INSERT INTO bids (value, UserId)
+VALUES (40, 1);
+
+INSERT INTO bids (value, UserId)
+VALUES (50, 2);
+
+INSERT INTO bids (value, UserId)
+VALUES (100, 4);
+
+INSERT INTO bids (value, UserId)
+VALUES (60, 2);
