@@ -27,6 +27,5 @@ SELECT * FROM jobs_skills;
 
 SELECT * FROM jobs_bids;
 
-INSERT INTO projects_jobs (ProjectId, JobId)
-VALUES (1, 1);
+SELECT * FROM users_projects;
 

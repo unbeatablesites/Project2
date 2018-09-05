@@ -167,6 +167,8 @@ VALUES (100);
 INSERT INTO bids (value)
 VALUES (60);
 
+## projects_jobs
+
 INSERT INTO projects_jobs (ProjectId, JobId)
 VALUES (1,1);
 
@@ -203,6 +205,8 @@ VALUES (5,2);
 INSERT INTO users_projects (ProjectId, UserId)
 VALUES (6,6);
 
+## users_bids
+
 INSERT INTO users_bids (BidId, UserId)
 VALUES (1,5);
 
@@ -238,3 +242,24 @@ VALUES (5,2);
 
 INSERT INTO jobs_skills (JobId, SkillId)
 VALUES (6,7);
+
+## jobs_bids
+
+INSERT INTO jobs_bids (BidId, JobId)
+VALUES (1, 1);
+
+INSERT INTO jobs_bids (BidId, JobId)
+VALUES (1, 2);
+
+INSERT INTO jobs_bids (BidId, JobId)
+VALUES (3, 3);
+
+INSERT INTO jobs_bids (BidId, JobId)
+VALUES (4, 4);
+
+INSERT INTO jobs_bids (BidId, JobId)
+VALUES (5, 5);
+
+INSERT INTO jobs_bids (BidId, JobId)
+VALUES (6, 6);
+
