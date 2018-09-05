@@ -1,5 +1,3 @@
-##skills
-
 INSERT INTO skills (title, category)
 VALUES ("sewing", "crafting");
 
@@ -168,3 +166,75 @@ VALUES (100);
 
 INSERT INTO bids (value)
 VALUES (60);
+
+INSERT INTO projects_jobs (ProjectId, JobId)
+VALUES (1,1);
+
+INSERT INTO projects_jobs (ProjectId, JobId)
+VALUES (2,2);
+
+INSERT INTO projects_jobs (ProjectId, JobId)
+VALUES (3,6);
+
+INSERT INTO projects_jobs (ProjectId, JobId)
+VALUES (4,3);
+
+INSERT INTO projects_jobs (ProjectId, JobId)
+VALUES (5,4);
+
+INSERT INTO projects_jobs (ProjectId, JobId)
+VALUES (6,5);
+
+INSERT INTO users_projects (ProjectId, UserId)
+VALUES (1,4);
+
+INSERT INTO users_projects (ProjectId, UserId)
+VALUES (2,5);
+
+INSERT INTO users_projects (ProjectId, UserId)
+VALUES (3,1);
+
+INSERT INTO users_projects (ProjectId, UserId)
+VALUES (4,3);
+
+INSERT INTO users_projects (ProjectId, UserId)
+VALUES (5,2);
+
+INSERT INTO users_projects (ProjectId, UserId)
+VALUES (6,6);
+
+INSERT INTO users_bids (BidId, UserId)
+VALUES (1,5);
+
+INSERT INTO users_bids (BidId, UserId)
+VALUES (2,3);
+
+INSERT INTO users_bids (BidId, UserId)
+VALUES (3,1);
+
+INSERT INTO users_bids (BidId, UserId)
+VALUES (4,2);
+
+INSERT INTO users_bids (BidId, UserId)
+VALUES (5,4);
+
+INSERT INTO users_bids (BidId, UserId)
+VALUES (6,2);
+
+INSERT INTO jobs_skills (JobId, SkillId)
+VALUES (1,1);
+
+INSERT INTO jobs_skills (JobId, SkillId)
+VALUES (2,5);
+
+INSERT INTO jobs_skills (JobId, SkillId)
+VALUES (3,3);
+
+INSERT INTO jobs_skills (JobId, SkillId)
+VALUES (4,9);
+
+INSERT INTO jobs_skills (JobId, SkillId)
+VALUES (5,2);
+
+INSERT INTO jobs_skills (JobId, SkillId)
+VALUES (6,7);
