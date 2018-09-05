@@ -17,3 +17,16 @@ SELECT * FROM projects;
 
 SELECT * FROM users_skills;
 
+SELECT * FROM projects_jobs;
+
+SELECT * FROM users_bids;
+
+SELECT * FROM users_jobs;
+
+SELECT * FROM jobs_skills;
+
+SELECT * FROM jobs_bids;
+
+INSERT INTO projects_jobs (ProjectId, JobId)
+VALUES (1, 1);
+

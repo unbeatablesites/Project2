@@ -25,21 +25,9 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
   User.associate = function(models) {
-    User.hasMany(models.Project);
-  };
-  User.associate = function(models) {
-    User.hasMany(models.Job, {
-      as: "user",
-      foreignKey: "UserId"
-    });
-  };
-  User.associate = function(models) {
-    User.belongsToMany(models.Skill, { through: "users_skills" });
-  };
-  User.associate = function(models) {
+    User.belongsToMany(models.Project, { through: "users_projects" });
     User.belongsToMany(models.Bid, { through: "users_bids" });
-  };
-  User.associate = function(models) {
+    User.belongsToMany(models.Skill, { through: "users_skills" });
     User.belongsToMany(models.Job, { through: "users_jobs" });
   };
   return User;
