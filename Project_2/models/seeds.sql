@@ -111,60 +111,60 @@ VALUES (11, 6);
 
 ## projects
 
-INSERT INTO projects (title, category, UserId)
-VALUES ("'67 Mustang", "automotive", 4);
+INSERT INTO projects (title, category)
+VALUES ("'67 Mustang", "automotive");
 
-INSERT INTO projects (title, category, UserId)
-VALUES ("Mario Cosplay", "cosplay", 5);
+INSERT INTO projects (title, category)
+VALUES ("Mario Cosplay", "cosplay");
 
-INSERT INTO projects (title, category, UserId)
-VALUES ("3D D&D Game Board", "crafts", 1);
+INSERT INTO projects (title, category)
+VALUES ("3D D&D Game Board", "crafts");
 
-INSERT INTO projects (title, category, UserId)
-VALUES ("Model Plane", "crafts", 3);
+INSERT INTO projects (title, category)
+VALUES ("Model Plane", "crafts");
 
-INSERT INTO projects (title, category, UserId)
-VALUES ("Temple Replica", "models", 2);
+INSERT INTO projects (title, category)
+VALUES ("Temple Replica", "models");
 
-INSERT INTO projects (title, category, UserId)
-VALUES ("Skate Deck", "sporting", 6);
+INSERT INTO projects (title, category)
+VALUES ("Skate Deck", "sporting");
 
 ## jobs
 
-INSERT INTO jobs (title, category, SkillId)
-VALUE ("Upholstery", "automotive", 1);
+INSERT INTO jobs (title, category)
+VALUE ("Upholstery", "automotive");
 
-INSERT INTO jobs (title, category, SkillId)
-VALUE ("Head Sculpting", "cosplay", 5);
+INSERT INTO jobs (title, category)
+VALUE ("Head Sculpting", "cosplay");
 
-INSERT INTO jobs (title, category, SkillId)
-VALUE ("detail painting", "modeling", 3);
+INSERT INTO jobs (title, category)
+VALUE ("detail painting", "modeling");
 
-INSERT INTO jobs (title, category, SkillId)
-VALUE ("miniature human models", "modeling", 9);
+INSERT INTO jobs (title, category)
+VALUE ("miniature human models", "modeling");
 
-INSERT INTO jobs (title, category, SkillId)
-VALUE ("building skateboard deck", "sports", 2);
+INSERT INTO jobs (title, category)
+VALUE ("building skateboard deck", "sports");
 
-INSERT INTO jobs (title, category, SkillId)
-VALUE ("building model buildings", "crafts", 7);
+INSERT INTO jobs (title, category)
+VALUE ("building model buildings", "crafts");
 
 ## bids
 
-INSERT INTO bids (value, UserId)
-VALUES (200, 5);
+INSERT INTO bids (value)
+VALUES (200);
 
-INSERT INTO bids (value, UserId)
-VALUES (150,  3);
+INSERT INTO bids (value)
+VALUES (150);
 
-INSERT INTO bids (value, UserId)
-VALUES (40, 1);
+INSERT INTO bids (value)
+VALUES (40);
 
-INSERT INTO bids (value, UserId)
-VALUES (50, 2);
+INSERT INTO bids (value)
+VALUES (50);
 
-INSERT INTO bids (value, UserId)
-VALUES (100, 4);
+INSERT INTO bids (value)
+VALUES (100);
 
-INSERT INTO bids (value, UserId)
-VALUES (60, 2);
+INSERT INTO bids (value)
+VALUES (60);
