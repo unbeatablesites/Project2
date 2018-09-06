@@ -249,7 +249,7 @@ INSERT INTO jobs_bids (BidId, JobId)
 VALUES (1, 1);
 
 INSERT INTO jobs_bids (BidId, JobId)
-VALUES (1, 2);
+VALUES (2, 2);
 
 INSERT INTO jobs_bids (BidId, JobId)
 VALUES (3, 3);
@@ -262,4 +262,24 @@ VALUES (5, 5);
 
 INSERT INTO jobs_bids (BidId, JobId)
 VALUES (6, 6);
+
+## users_jobs
+
+INSERT INTO users_jobs (JobId, UserId)
+VALUES (1, 5);
+
+INSERT INTO users_jobs (JobId, UserId)
+VALUES (2, 3);
+
+INSERT INTO users_jobs (JobId, UserId)
+VALUES (3, 1);
+
+INSERT INTO users_jobs (JobId, UserId)
+VALUES (4, 2);
+
+INSERT INTO users_jobs (JobId, UserId)
+VALUES (5, 4);
+
+INSERT INTO users_jobs (JobId, UserId)
+VALUES (6, 2);
 
