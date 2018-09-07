@@ -19,6 +19,10 @@ module.exports = function(app) {
     });
   });
 
+  app.get('/allJobs', function(req, res){
+  res.render('allJobs');
+});
+
   // Delete an example by id
   app.delete("/api/examples/:id", function(req, res) {
     db.Example.destroy({ where: { id: req.params.id } }).then(function(
