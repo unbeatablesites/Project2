@@ -14,33 +14,9 @@ router.get("/:id",function(req,res){
   });
 });
 
-
-
-
-router.post('/add',(req,res) => {
-
-	const newJob = req.body.new_job;
-
-
-
-    orm.insertOne(newJob, function(error, Job) {
-      if (error){
-        return res.status(401).json({
-          message: 'No access to DB'
-        });
-      }
-
-      return res.json({
-      	title: newJob,
-      	id: Job.insertId
-
-      });
-  });
-		
+router.get('/allJobs', function(req, res){
+  res.render('allJobs');
 });
-
-
-
 
 
 module.exports = router;

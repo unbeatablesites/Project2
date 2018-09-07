@@ -1,6 +1,12 @@
 var db = require("../models");
 
 module.exports = function(app) {
+
+
+   app.get('/allJobs', function(req, res){
+  res.render('allJobs');
+});
+
   // Load index page
   app.get(("/:id",function(req,res){
     db.User.findOne({ 
@@ -15,6 +21,11 @@ module.exports = function(app) {
       });
     });
 });
+
+  app.get('/allJobs', function(req, res){
+  res.render('allJobs');
+});
+
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
