@@ -1,20 +1,17 @@
 const express = require("express");
 const router = express.Router();
 
-const orm = require('../config/orm');
+const db = require("../models")
 
 
-router.get("/",function(req,res){
-    orm.selectAll(function(error, Jobs) {
-      if (error){
-        return res.status(501).json({
-          message: 'No access to DB'
-        });
-      }
-
-		console.log('Jobs:', Jobs);      
-      res.render("index", { Jobs, style: 'main'});
-    });
+router.get("/:id",function(req,res){
+  db.User.findOne({ 
+    where: { id: req.params.id }, 
+    include: [db.Project, db.Job, db.Bid]
+  }).then(function(dbUser) {
+    console.log(dbUser)
+    res.render("index", {dbUser: dbUser});
+  });
 });
 
 

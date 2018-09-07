@@ -62,8 +62,8 @@
     <aside class="app-sidebar">
       <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
         <div>
-          <p class="app-sidebar__user-name">John Doe</p>
-          <p class="app-sidebar__user-designation">Frontend Developer</p>
+          <p class="app-sidebar__user-name">{{dbUser.username}}</p>
+          <p class="app-sidebar__user-designation">{{dbUser.email}}</p>
         </div>
       </div>
       <ul class="app-menu">
@@ -122,9 +122,9 @@
           <div class="tile">
             <h2>My Open Projects</h2>
 
-                  {{#each Jobs}}
+                  {{#each dbUser.Projects}}
 
-                  <p>{{title}}</p>
+                  <p>{{this.title}}</p>
 
                   {{/each }}
       
@@ -132,11 +132,11 @@
         </div>
         <div class="col-md-6">
           <div class="tile">
-            <h3 class="tile-title">My Bids</h3>
+            <h3 class="tile-title">My Jobs</h3>
 
-              {{#each Users}}
+              {{#each dbUser.Jobs}}
 
-                  <p>{{username}}</p>
+                  <p>{{this.title}}</p>
 
                   {{/each }}
 
