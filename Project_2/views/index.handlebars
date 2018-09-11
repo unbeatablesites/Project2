@@ -1,6 +1,9 @@
 <body class="app sidebar-mini rtl">
+    {{#if user}}
+      <h1>Hello {{user.username}}</h1>
+    {{/if}}
     <!-- Navbar-->
-    <header class="app-header"><a class="app-header__logo" href="index.html">Group 16</a>
+    <header class="app-header"><a class="app-header__logo" href="index.html">CreateHub</a>
       <ul class="app-nav">
         <li class="app-search">
           <input class="app-search__input" type="search" placeholder="Search">
@@ -62,8 +65,8 @@
     <aside class="app-sidebar">
       <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
         <div>
-          <p class="app-sidebar__user-name">{{dbUser.username}}</p>
-          <p class="app-sidebar__user-designation">{{dbUser.email}}</p>
+          <p class="app-sidebar__user-name">Jordan</p>
+          <p class="app-sidebar__user-designation">jsenken@yahoo.com</p>
         </div>
       </div>
       <ul class="app-menu">
@@ -122,11 +125,11 @@
           <div class="tile">
             <h2>My Open Projects</h2>
 
-                  {{#each dbUser.Projects}}
+                  
 
-                  <p>{{this.title}}</p>
+                  <p>'67 Mustang</p>
 
-                  {{/each }}
+                  
       
           </div>
         </div>
@@ -134,11 +137,11 @@
           <div class="tile">
             <h3 class="tile-title">My Jobs</h3>
 
-              {{#each dbUser.Jobs}}
+             
 
-                  <p>{{this.title}}</p>
+                  <p>detail painting</p>
 
-                  {{/each }}
+                  
 
             </div>
           </div>
@@ -169,5 +172,6 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+
    
   </body>

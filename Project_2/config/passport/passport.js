@@ -1,7 +1,8 @@
 const bCrypt = require('bcrypt-nodejs');
 
-module.exports = function(passport, user) {
-    const User = user;
+module.exports = function(passport, User) {
+    //console.log("*********** " + User)
+    const user = User;
     const LocalStrategy = require('passport-local').Strategy;
 
     passport.use(
@@ -13,10 +14,10 @@ module.exports = function(passport, user) {
                 passReqToCallback: true
             },
             (req, email, password, done) => {
-                const User = user;
+                const user = User;
                 const isValidPassword = (userPass, pass) => bCrypt.compareSync(pass, userPass);
 
-                User.findOne({
+                user.findOne({
                     where: {
                         email: email
                     }
@@ -26,8 +27,9 @@ module.exports = function(passport, user) {
                         if (!isValidPassword(user.password, password))
                             return done(null, false, { message: 'Incorrect Password' });
 
-                        const userInfo = user.id;
-                        console.log(userInfo);
+                        //changed this from user.id to user.get() to match chris dont know why
+                        const userInfo = user.get();
+                        // console.log(userInfo);
                         return done(null, userInfo);
                     })
                     .catch((err) => {
@@ -60,10 +62,8 @@ module.exports = function(passport, user) {
 
                     const userPassword = generateHash(password);
                     const data = {
-                        email: email,
-                        password: userPassword,
-                        firstname: req.body.firstname,
-                        lastname: req.body.lastname
+                        ...req.body,
+                        password: userPassword
                     };
 
                     User.create(data).then((newUser, created) => {
