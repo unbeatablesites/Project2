@@ -40,9 +40,9 @@ module.exports = (app, passport) => {
     })
   );
 
-  app.get("/:id", isLoggedIn, function(req,res){
+  app.get("/", isLoggedIn, function(req,res){
     db.User.findOne({ 
-      where: { id: req.params.id }, 
+      where: { id: req.user.id }, 
       include: [db.Project, db.Job, db.Bid]
     }).then(function(dbUser) {
       console.log(dbUser)
